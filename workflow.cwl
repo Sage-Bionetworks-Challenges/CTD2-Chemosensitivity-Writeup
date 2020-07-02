@@ -28,7 +28,7 @@ inputs:
     type: File
   - id: admin
     type: string
-    default: "jane.doe"  # TODO: enter admin username (they will become the archive owner)
+    default: "3406894"
 
 # there are no output at the workflow engine level.  Everything is uploaded to Synapse
 outputs: []
@@ -42,12 +42,12 @@ steps:
       - id: submissionid
         source: "#submissionId"
       - id: challengewiki
-        valueFrom: "syn123"  # TODO: update to the Challenge's synID
+        valueFrom: "syn21763589"
     # UNCOMMENT THE FOLLOWING IF NEEDED
     #   - id: public
     #     default: true
-    #   - id: admin
-    #     source: "#admin"
+      - id: admin
+        source: "#admin"
     out:
       - id: results
       - id: status
@@ -78,7 +78,7 @@ steps:
         source: "#validate/results"
       - id: to_public
         default: true
-      - id: force_change_annotation_acl
+      - id: force
         default: true
       - id: synapse_config
         source: "#synapseConfig"
@@ -118,7 +118,7 @@ steps:
         source: "#archive/results"
       - id: to_public
         default: true
-      - id: force_change_annotation_acl
+      - id: force
         default: true
       - id: synapse_config
         source: "#synapseConfig"
