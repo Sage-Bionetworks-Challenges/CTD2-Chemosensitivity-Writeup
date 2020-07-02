@@ -28,7 +28,7 @@ inputs:
     type: File
   - id: admin
     type: string
-    default: "3406894"
+    default: "CTD-squared Pancancer Chemosensitivity DREAM Challenge Organizers"
 
 # there are no output at the workflow engine level.  Everything is uploaded to Synapse
 outputs: []
